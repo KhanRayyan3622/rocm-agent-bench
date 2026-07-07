@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  rocm-agent-bench:
+    build: .
+    ports:
+      - "7860:7860"
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./results:/app/results
