@@ -1,4 +1,3 @@
-# ROCmAgentBench — Multi-Agent AI System on AMD MI300X
 FROM rocm/vllm:latest
 
 WORKDIR /app
@@ -14,5 +13,4 @@ ENV PYTHONPATH=/app
 EXPOSE 7860
 EXPOSE 8000
 
-# Default: launch the dashboard
 CMD ["python", "-m", "dashboard.app"]
